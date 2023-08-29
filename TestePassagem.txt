@@ -1,0 +1,22 @@
+public class TestePassagem {
+	
+	public static void main(String[] args){ // O que cmd recebe é um argumento
+		int a = 20;
+		
+		// Instaciamento da classe Passador
+		Passador p = new Passador(a); // p = 20
+		System.out.printf("p antes = %d\n", p.getUmNumero()); // Puxando o valor da classe Passador
+		// Instaciamento da classe TestePassagem
+		TestePassagem t = new TestePassagem();
+		t.umMetodo(p);
+		System.out.printf("p depois = %d\n", p.getUmNumero());
+	} // Fim do método main
+	
+	
+	// Método de classe
+	public void umMetodo(Passador umPassador){
+		System.out.printf("[m] p antes = %d\n", umPassador.getUmNumero());
+        umPassador.setUmNumero(umPassador.getUmNumero() + 1);
+        System.out.printf("[m] p depois = %d\n", umPassador.getUmNumero());
+	}
+} // Fim da classe TestePassagem
