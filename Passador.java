@@ -1,4 +1,4 @@
-public class Passador {
+public class Passador { // {} -> Bloco
 	// Atributos:
 	private int umNumero;
 	
